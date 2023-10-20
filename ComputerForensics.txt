@@ -1,0 +1,575 @@
+Guide to Computer Forensics
+     and Investigations
+
+         Chapter 8
+  Recovering Graphics Files
+                                          Objectives
+
+•    Describe types of graphics file formats
+•    Explain types of data compression
+•    Explain how to locate and recover graphics files
+•    Describe how to identify unknown file formats
+•    Explain copyright issues with graphics
+
+
+
+
+Guide to Computer Forensics and Investigations, Fifth Edition   © Cengage Learning 2015   2
+                Recognizing a Graphics File
+
+• Graphic files contain digital photographs, line art,
+  three-dimensional images, and scanned replicas of
+  printed pictures
+      – Bitmap images: collection of dots
+      – Vector graphics: based on mathematical
+        instructions
+      – Metafile graphics: combination of bitmap and
+        vector
+• Types of programs
+      – Graphics editors
+      – Image viewers
+Guide to Computer Forensics and Investigations, Fifth Edition                             3
+                                                                © Cengage Learning 2015
+       Understanding Bitmap and Raster
+                   Images
+• Bitmap images
+      – Grids of individual pixels
+• Raster images - also collections of pixels
+      – Pixels are stored in rows
+      – Better for printing
+• Image quality
+      – Screen resolution - determines amount of detail
+      – Software contributes to image quality (drivers)
+      – Number of color bits used per pixel
+
+Guide to Computer Forensics and Investigations, Fifth Edition   © Cengage Learning 2015   4
+           Understanding Vector Graphics
+
+• Characteristics of vector graphics
+      – Uses lines instead of dots
+      – Store only the calculations for drawing lines and
+        shapes
+      – Smaller than bitmap files
+      – Preserve quality when image is enlarged
+• CorelDraw, Adobe Illustrator
+
+
+
+Guide to Computer Forensics and Investigations, Fifth Edition   © Cengage Learning 2015   5
+         Understanding Metafile Graphics
+
+• Metafile graphics combine raster and vector
+  graphics
+• Example
+      – Scanned photo (bitmap) with text (vector)
+• Share advantages and disadvantages of both types
+      – When enlarged, bitmap part loses quality
+
+
+
+
+Guide to Computer Forensics and Investigations, Fifth Edition   © Cengage Learning 2015   6
+  Understanding Graphics File Formats
+
+• Standard bitmap file formats
+      –   Portable Network Graphic (.png)
+      –   Graphic Interchange Format (.gif)
+      –   Joint Photographic Experts Group (.jpeg, .jpg)
+      –   Tagged Image File Format (.tiff, .tif)
+      –   Window Bitmap (.bmp)
+• Standard vector file formats
+      – Hewlett Packard Graphics Language (.hpgl)
+      – Autocad (.dxf)
+Guide to Computer Forensics and Investigations, Fifth Edition   © Cengage Learning 2015   7
+  Understanding Graphics File Formats
+
+• Nonstandard graphics file formats
+      –   Targa (.tga)
+      –   Raster Transfer Language (.rtl)
+      –   Adobe Photoshop (.psd) and Illustrator (.ai)
+      –   Freehand (.fh9)
+      –   Scalable Vector Graphics (.svg)
+      –   Paintbrush (.pcx)
+• Search the Web for software to manipulate
+  unknown image formats
+
+Guide to Computer Forensics and Investigations, Fifth Edition   © Cengage Learning 2015   8
+      Understanding Digital Camera File
+                  Formats
+
+• Witnesses or suspects can create their own digital
+  photos
+• Examining the raw file format
+      – Raw file format
+             • Referred to as a digital negative
+             • Typically found on many higher-end digital cameras
+      – Sensors in the digital camera simply record pixels on
+        the camera’s memory card
+      – Raw format maintains the best picture quality
+
+Guide to Computer Forensics and Investigations, Fifth Edition   © Cengage Learning 2015   9
+      Understanding Digital Camera File
+                  Formats
+
+• Examining the raw file format (cont’d)
+      – The biggest disadvantage is that it’s proprietary
+             • And not all image viewers can display these formats
+      – The process of converting raw picture data to
+        another format is referred to as demosaicing
+• Examining the Exchangeable Image File format
+      – Exchangeable Image File (Exif) format
+             • Commonly used to store digital pictures
+             • Developed by JEITA as a standard for storing
+               metadata in JPEG and TIF files
+Guide to Computer Forensics and Investigations, Fifth Edition   © Cengage Learning 2015   10
+      Understanding Digital Camera File
+                  Formats
+
+• Examining the Exchangeable Image File format
+  (cont’d)
+      – Exif format collects metadata
+             • Investigators can learn more about the type of digital
+               camera and the environment in which pictures were
+               taken
+      – Viewing an Exif JPEG file’s metadata requires
+        special programs
+             • Exif Reader, IrfanView, or ProDiscover
+      – Exif file stores metadata at the beginning of the file
+Guide to Computer Forensics and Investigations, Fifth Edition   © Cengage Learning 2015   11
+      Understanding Digital Camera File
+                  Formats
+
+
+
+
+Guide to Computer Forensics and Investigations, Fifth Edition   © Cengage Learning 2015   12
+      Understanding Digital Camera File
+                  Formats
+
+
+
+
+Guide to Computer Forensics and Investigations, Fifth Edition   © Cengage Learning 2015   13
+      Understanding Digital Camera File
+                  Formats
+
+
+
+
+Guide to Computer Forensics and Investigations, Fifth Edition   © Cengage Learning 2015   14
+      Understanding Digital Camera File
+                  Formats
+
+• Examining the Exchangeable Image File format
+  (cont’d)
+      – With tools such as ProDiscover and Exif Reader
+             • You can extract metadata as evidence for your case
+
+
+
+
+Guide to Computer Forensics and Investigations, Fifth Edition   © Cengage Learning 2015   15
+      Understanding Digital Camera File
+                  Formats
+
+
+
+
+Guide to Computer Forensics and Investigations, Fifth Edition   © Cengage Learning 2015   16
+       Understanding Data Compression
+
+• Some image formats compress their data
+      – GIF and JPEG
+• Others, like BMP, do not compress their data
+      – Use data compression tools for those formats
+• Data compression
+      – Coding data from a larger to a smaller form
+      – Types
+             • Lossless compression and lossy compression
+
+
+Guide to Computer Forensics and Investigations, Fifth Edition   © Cengage Learning 2015   17
+       Lossless and Lossy Compression
+• Lossless compression
+      – Reduces file size without removing data
+      – Based on Huffman or Lempel-Ziv-Welch coding
+             • For redundant bits of data
+      – Utilities: WinZip, PKZip, StuffIt, and FreeZip
+• Lossy compression
+      – Permanently discards bits of information
+      – Vector quantization (VQ)
+             • Determines what data to discard based on vectors in the
+               graphics file
+      – Utility: Lzip
+
+
+Guide to Computer Forensics and Investigations, Fifth Edition   © Cengage Learning 2015   18
+      Locating and Recovering Graphics
+                    Files
+
+• Operating system tools
+      – Time consuming
+      – Results are difficult to verify
+• Digital forensics tools
+      – Image headers
+             • Compare them with good header samples
+             • Use header information to create a baseline analysis
+      – Reconstruct fragmented image files
+             • Identify data patterns and modified headers
+
+Guide to Computer Forensics and Investigations, Fifth Edition   © Cengage Learning 2015   19
+     Identifying Graphics File Fragments
+
+• Carving or salvaging
+      – Recovering any type of file fragments
+• Digital forensics tools
+      – Can carve from file slack and free space
+      – Help identify image files fragments and put them
+        together
+
+
+
+
+Guide to Computer Forensics and Investigations, Fifth Edition   © Cengage Learning 2015   20
+              Repairing Damaged Headers
+
+• When examining recovered fragments from files in
+  slack or free space
+      – You might find data that appears to be a header
+• If header data is partially overwritten, you must
+  reconstruct the header to make it readable
+      – By comparing the hexadecimal values of known
+        graphics file formats with the pattern of the file
+        header you found
+
+
+
+Guide to Computer Forensics and Investigations, Fifth Edition   © Cengage Learning 2015   21
+              Repairing Damaged Headers
+
+• Each graphics file has a unique header value
+• Example:
+      – A JPEG file has the hexadecimal header value
+        FFD8, followed by the label JFIF for a standard
+        JPEG or Exif file at offset 6
+• Exercise:
+      – Investigate a possible intellectual property theft by a
+        contract employee of Exotic Mountain Tour Service
+        (EMTS)
+
+Guide to Computer Forensics and Investigations, Fifth Edition   © Cengage Learning 2015   22
+              Repairing Damaged Headers
+
+
+
+
+Guide to Computer Forensics and Investigations, Fifth Edition   © Cengage Learning 2015   23
+              Repairing Damaged Headers
+
+
+
+
+Guide to Computer Forensics and Investigations, Fifth Edition   © Cengage Learning 2015   24
+  Searching For and Carving Data from
+          Unallocated Space
+
+• Steps
+      – Planning your examination
+      – Searching for and recovering digital photograph
+        evidence
+             • Use ProDiscover to search for and extract (recover)
+               possible evidence of JPEG files
+             • False hits are referred to as false positives
+
+
+
+
+Guide to Computer Forensics and Investigations, Fifth Edition   © Cengage Learning 2015   25
+  Searching For and Carving Data from
+          Unallocated Space
+
+
+
+
+Guide to Computer Forensics and Investigations, Fifth Edition   © Cengage Learning 2015   26
+  Searching For and Carving Data from
+          Unallocated Space
+
+
+
+
+Guide to Computer Forensics and Investigations, Fifth Edition   © Cengage Learning 2015   27
+  Searching For and Carving Data from
+          Unallocated Space
+
+
+
+
+Guide to Computer Forensics and Investigations, Fifth Edition   © Cengage Learning 2015   28
+   Searching for and Carving Data from
+           Unallocated Space
+
+
+
+
+Guide to Computer Forensics and Investigations, Fifth Edition   © Cengage Learning 2015   29
+   Searching for and Carving Data from
+           Unallocated Space
+
+
+
+
+Guide to Computer Forensics and Investigations, Fifth Edition   © Cengage Learning 2015   30
+                      Rebuilding File Headers
+
+• Before attempting to edit a recovered graphics file
+      – Try to open the file with an image viewer first
+• If the image isn’t displayed, you have to inspect
+  and correct the header values manually
+• Steps
+      – Recover more pieces of file if needed
+      – Examine file header
+             • Compare with a good header sample
+             • Manually insert correct hexadecimal values
+      – Test corrected file
+Guide to Computer Forensics and Investigations, Fifth Edition   © Cengage Learning 2015   31
+                      Rebuilding File Headers
+
+
+
+
+Guide to Computer Forensics and Investigations, Fifth Edition   © Cengage Learning 2015   32
+                      Rebuilding File Headers
+
+
+
+
+Guide to Computer Forensics and Investigations, Fifth Edition   © Cengage Learning 2015   33
+                      Rebuilding File Headers
+
+
+
+
+Guide to Computer Forensics and Investigations, Fifth Edition   © Cengage Learning 2015   34
+                      Rebuilding File Headers
+
+
+
+
+Guide to Computer Forensics and Investigations, Fifth Edition   © Cengage Learning 2015   35
+                      Rebuilding File Headers
+
+
+
+
+Guide to Computer Forensics and Investigations, Fifth Edition   © Cengage Learning 2015   36
+            Reconstructing File Fragments
+
+• Locate the noncontiguous clusters that make up a
+  deleted file
+• Steps
+      – Locate and export all clusters of the fragmented file
+      – Determine the starting and ending cluster numbers
+        for each fragmented group of clusters
+      – Copy each fragmented group of clusters in their
+        correct sequence to a recovery file
+      – Rebuild the file’s header to make it readable in a
+        graphics viewer
+
+Guide to Computer Forensics and Investigations, Fifth Edition   © Cengage Learning 2015   37
+            Reconstructing File Fragments
+
+
+
+
+Guide to Computer Forensics and Investigations, Fifth Edition   © Cengage Learning 2015   38
+            Reconstructing File Fragments
+
+
+
+
+Guide to Computer Forensics and Investigations, Fifth Edition   © Cengage Learning 2015   39
+            Reconstructing File Fragments
+
+
+
+
+Guide to Computer Forensics and Investigations, Fifth Edition   © Cengage Learning 2015   40
+            Reconstructing File Fragments
+
+
+
+
+Guide to Computer Forensics and Investigations, Fifth Edition   © Cengage Learning 2015   41
+        Identifying Unknown File Formats
+
+• Knowing the purpose of each format and how it
+  stores data is part of the investigation process
+• The Internet is the best source
+      – Search engines like Google
+      – Find explanations and viewers
+• Popular Web sites
+      – www.fileformat.info/format/all.htm
+      – http://extension.informer.com
+      – www.martinreddy.net/gfxl
+
+Guide to Computer Forensics and Investigations, Fifth Edition   © Cengage Learning 2015   42
+         Analyzing Graphics File Headers
+
+• Necessary when you find files your tools do not
+  recognize
+• Use a hexadecimal editor such as WinHex
+      – Record hexadecimal values in the header and use
+        them to define a file type
+• Example:
+      – XIF file format is old, little information is available
+      – The first 3 bytes of an XIF file are the same as a TIF
+        file
+      – Build your own header search string
+Guide to Computer Forensics and Investigations, Fifth Edition   © Cengage Learning 2015   43
+         Analyzing Graphics File Headers
+
+
+
+
+Guide to Computer Forensics and Investigations, Fifth Edition   © Cengage Learning 2015   44
+         Analyzing Graphics File Headers
+
+
+
+
+Guide to Computer Forensics and Investigations, Fifth Edition   © Cengage Learning 2015   45
+                    Tools for Viewing Images
+ • After recovering a graphics file
+       – Use an image viewer to open and view it
+ • No one viewer program can read every file format
+       – Having many different viewer programs is best
+ • Most GUI forensics tools include image viewers
+   that display common image formats
+ • Be sure to analyze, identify, and inspect every
+   unknown file on a drive
+
+
+
+Guide to Computer Forensics and Investigations, Fifth Edition   © Cengage Learning 2015   46
+        Understanding Steganography in
+                Graphics Files
+
+• Steganography hides information inside image files
+      – An ancient technique
+• Two major forms: insertion and substitution
+• Insertion
+      – Hidden data is not displayed when viewing host file
+        in its associated program
+             • You need to analyze the data structure carefully
+      – Example: Web page
+
+
+Guide to Computer Forensics and Investigations, Fifth Edition   © Cengage Learning 2015   47
+        Understanding Steganography in
+                Graphics Files
+
+
+
+
+Guide to Computer Forensics and Investigations, Fifth Edition   © Cengage Learning 2015   48
+        Understanding Steganography in
+                Graphics Files
+
+
+
+
+Guide to Computer Forensics and Investigations, Fifth Edition   © Cengage Learning 2015   49
+        Understanding Steganography in
+                Graphics Files
+• Substitution
+      – Replaces bits of the host file with other bits of data
+      – Usually change the last two LSBs (least significant
+        bit)
+      – Detected with steganalysis tools (a.k.a - steg tools)
+• You should inspect all files for evidence of
+  steganography
+• Clues to look for:
+      – Duplicate files with different hash values
+      – Steganography programs installed on suspect’s drive
+Guide to Computer Forensics and Investigations, Fifth Edition   © Cengage Learning 2015   50
+        Understanding Steganography in
+                Graphics Files
+
+
+
+
+Guide to Computer Forensics and Investigations, Fifth Edition   © Cengage Learning 2015   51
+        Understanding Steganography in
+                Graphics Files
+
+
+
+
+Guide to Computer Forensics and Investigations, Fifth Edition   © Cengage Learning 2015   52
+        Understanding Steganography in
+                Graphics Files
+
+
+
+
+Guide to Computer Forensics and Investigations, Fifth Edition   © Cengage Learning 2015   53
+                    Using Steganalysis Tools
+
+• Use steg tools to detect, decode, and record
+  hidden data
+• Detect variations of the graphic image
+      – When applied correctly you cannot detect hidden
+        data in most cases
+• Check to see whether the file size, image quality, or
+  file extensions have changed
+
+
+
+Guide to Computer Forensics and Investigations, Fifth Edition   © Cengage Learning 2015   54
+   Understanding Copyright Issues with
+               Graphics
+• Steganography has been used to protect
+  copyrighted material
+      – By inserting digital watermarks into a file
+• Digital investigators need to aware of copyright
+  laws
+• Copyright laws for Internet are not clear
+      – There is no international copyright law
+• Check www.copyright.gov
+      – U.S. Copyright Office identifies what can and can’t
+        be covered under copyright law in U.S.
+Guide to Computer Forensics and Investigations, Fifth Edition   © Cengage Learning 2015   55
+                                           Summary
+• Three types of graphics files
+      – Bitmap
+      – Vector
+      – Metafile
+•    Image quality depends on various factors
+•    Standard file formats: .gif, .jpeg, .bmp, and .tif
+•    Nonstandard file formats: .tga, .rtl, .psd, and .svg
+•    Some image formats compress their data
+      – Lossless compression
+      – Lossy compression
+Guide to Computer Forensics and Investigations, Fifth Edition   © Cengage Learning 2015   56
+                                           Summary
+• Digital camera photos are typically in raw and EXIF
+  JPEG formats
+• Recovering image files
+     – Carving file fragments
+     – Rebuilding image headers
+• The Internet is best for learning more about file
+  formats and their extensions
+• Software
+     – Image editors
+     – Image viewers
+Guide to Computer Forensics and Investigations, Fifth Edition   © Cengage Learning 2015   57
+                                           Summary
+
+• Steganography
+      – Hides information inside image files
+      – Forms
+             • Insertion
+             • Substitution
+• Steganalysis
+      – Finds whether image files hide information
